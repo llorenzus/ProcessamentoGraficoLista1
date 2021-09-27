@@ -1,0 +1,3 @@
+OpenGL Shading Language é basicamente uma linguagem de programação de shading baseada em C.
+
+Os shaders obrigatórios, na versão que trabalhamos, são o Vertex shading e o Fragment shading que processam respectivamente cada vertice e cada fragmento, ambos de forma separada

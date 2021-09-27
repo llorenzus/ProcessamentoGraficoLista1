@@ -1,0 +1,3 @@
+Existem 3 primitivas gráficas, sendo elas, os pontos, os polígonos e a malha.
+
+na OpenGL o armazenamento dos vértices é feito por meio de VBOs.

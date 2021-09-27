@@ -1,0 +1,3 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: O diretório intermediário (Debug\) contém arquivos compartilhados de outro projeto (Exercicio 4.vcxproj). Isso pode levar a um comportamento incorreto de limpeza e recompilação.
+  Origem.cpp
+  Exercicio 4.vcxproj -> C:\Users\loren\OneDrive\Área de Trabalho\Processamento grafico\PG2021-2-main\HelloTriangle\Debug\Exercicio 6.exe

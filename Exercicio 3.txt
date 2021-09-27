@@ -1,0 +1,7 @@
+VBO, Vertex Buffer Object, são utilizados para guardar as informações dos vértices
+
+VAO, Vertex Array Object, são utilizados para vincular as informações dos VBOs em um objeto
+
+EBO, Element Buffer Object, são utilizados para correção de problemas relacionado a um vértice, reduzindo disperdício e aumentando eficiência.
+
+Os 3 se relacionam da seguinte forma, o VBO salva as informações de cada vértice e então o VAO acessa esses dados para a mohntagem dos objetos e por último o VAO acessa o EBO para a melhoria do processo.

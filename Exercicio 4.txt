@@ -1,0 +1,58 @@
+Não tenho certeza se entendi corretamente a pergunta mas segue abaixo a minha resposta
+
+Algumas das configuracoes
+
+GLfloat vertices[] = {
+	 0.0,  6.0, 0.0,
+	 -6.0, -5.0, 0.0,
+	 6.0,  -3.0, 0.0,
+};
+glGenBuffers(1, &VBO);
+//Faz a conexão (vincula) do buffer como um buffer de array
+glBindBuffer(GL_ARRAY_BUFFER, VBO);
+//Envia os dados do array de floats para o buffer da OpenGl
+glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+glGenVertexArrays(1, &VAO);
+glBindVertexArray(VAO);
+xyz) 
+
+glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+glEnableVertexAttribArray(0);
+
+Vertex shader
+
+const GLchar* vertexShaderSource = "#version 450\n"
+"layout (location = 0) in vec3 position;\n"
+"void main()\n"
+"{\n"
+"gl_Position = vec4(position.x, position.y, position.z, 1.0);\n"
+"}\0";
+
+Fragment shader
+
+const GLchar* fragmentShaderSource = "#version 450\n"
+"uniform vec4 inputColor;\n"
+"out vec4 color;\n"
+"void main()\n"
+"{\n"
+"color = inputColor;\n"
+"}\n\0";
+
+No gameloop
+
+glfwPollEvents();
+glClearColor(0.3f, 0.3f, 0.3f, 1.0f); //cor de fundo
+glClear(GL_COLOR_BUFFER_BIT);
+glBindVertexArray(VAO);
+glUniform4f(colorLoc, 1.0f, 0.0f, 0.0f, 1.0f);
+glDrawArrays(GL_POINTS, 0, 1);
+glUniform4f(colorLoc, 0.0f, 1.0f, 0.0f, 1.0f);
+glDrawArrays(GL_POINTS, 1, 1);
+glUniform4f(colorLoc, 0.0f, 0.0f, 1.0f, 1.0f);
+glDrawArrays(GL_POINTS, 2, 1);
+
+
+
+
+
+	
